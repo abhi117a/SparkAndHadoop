@@ -21,10 +21,31 @@ object Main extends App {
     println(total)
   }
 
+  def Square( funcCheck: Int => Boolean, value: Int) = {
+    if(funcCheck(value)) {
+      var finalVal = value * value;
+      println(finalVal)
+    }
+    else {
+      println("Value is 0 or Negative")
+    }
+  }
+
+  def funcCheck(valu: Int): Boolean ={
+  if(valu <= 0){
+    return false
+  }
+  else {
+    return true
+  }
+}
+
+
   def id(i:Int) = i
   def sqr(i:Int) = i*i
   def double(i: Int) = i*2
 
-  sum(1,5)
-  sum1(sqr,1,5)
+  //sum(1,5)
+  //sum1(sqr,1,5)
+  Square(funcCheck,0)
 }
